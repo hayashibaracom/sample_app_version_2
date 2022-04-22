@@ -1,10 +1,26 @@
-<h1>UsersVideo</h1>
-<button><%= link_to "動画投稿！", new_video_path %></button>
+<section class="video_body">
 
-<% @videos.each do |video| %>
+<h1>みんなの動画</h1>
+  <div class="new_btn">
+    <button class="new_video_btn"><%= link_to "動画投稿！", new_video_path %></button>
+  </div>
+
+<% Video.all.each do |video| %>
   <div class="users_video">
+    <%= gravatar_for video.user, size: 50 %>
+    <%= link_to video.user.name, video.user %>
     <h4>タイトル：<%= video.title %></h4> 
     <p>説明：<%= video.introduction %></p>
     <%= video_tag(rails_blob_path(video.video), size: "500x300", autoplay: true, muted: true, controls: true) %>
+    <div class="btn_area">
+      <button>
+        <%= link_to "動画削除", video, method: :delete,
+                                        data: { confirm: "You sure?" } %>
+      </button>
+      <button>
+        <%= link_to "編集", edit_video_path(video) %>
+      </button>
+    </div>
   </div>
 <% end %>
+</section>

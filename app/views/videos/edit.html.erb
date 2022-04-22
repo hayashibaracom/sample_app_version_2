@@ -1,7 +1,6 @@
-<h1>みんなの動画へ投稿</h1>
+<h1>動画情報編集</h1>
 <%= form_with model: @video, local: true do |form| %>
   <p>title</p><%= form.text_field :title %> <br>
   <p>introduction</p><%= form.text_area :introduction %> <br>
-  <p>video</p><%= form.file_field :video %> <br>
   <%= form.submit %>
 <% end %>

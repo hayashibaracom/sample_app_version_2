@@ -1,4 +1,4 @@
 class Video < ApplicationRecord
-  has_one_attached :video
   belongs_to :user
+  has_one_attached :video
 end

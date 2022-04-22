@@ -6,3 +6,6 @@
   <p><%= @video.introduction %></p>
   <%= video_tag(rails_blob_path(@video.video), size: "500x300", autoplay: true, muted: true, controls: true) %>
 <% end %>
+<div class="users_video_root">
+  <button class="users_video_root_btn"><%= link_to "みんなの動画", videos_path %></button>
+</div>

@@ -1,3 +1,33 @@
 // Place all the styles related to the videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.video_body {
+  background-color: rgb(235, 235, 235);
+  padding: 50px;
+  width: 100%;
+}
+button {
+  width: 90px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  &:hover {
+    background-color: rgb(249, 250, 220);
+    opacity: 0.9;
+  }
+}
+button a:hover{
+  background-color: rgb(254, 255, 198);
+  color: black;
+}
+.new_btn {
+  text-align: center;
+}
+.new_video_btn {
+  width: 400px;
+}
+.users_video_root_btn {
+  width: 200px;
+}
+.users_video {
+  margin-top: 50px;
+}
