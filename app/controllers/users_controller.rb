@@ -67,6 +67,11 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def video
+    @user = User.find(params[:id])
+  end
+  
+
   
   private
     def user_params

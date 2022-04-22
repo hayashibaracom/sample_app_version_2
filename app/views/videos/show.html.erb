@@ -1,0 +1,8 @@
+<h4>投稿者</h4>
+<%= gravatar_for @user, size: 50 %>
+<%= link_to @user.name, @user %>
+<% if @video.video.attached? %>
+  <p><%= @video.title %></p> <br>
+  <p><%= @video.introduction %></p>
+  <%= video_tag(rails_blob_path(@video.video), size: "500x300", autoplay: true, muted: true, controls: true) %>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>UsersVideo</h1>
+<button><%= link_to "動画投稿！", new_video_path %></button>
+
+<% @videos.each do |video| %>
+  <div class="users_video">
+    <h4>タイトル：<%= video.title %></h4> 
+    <p>説明：<%= video.introduction %></p>
+    <%= video_tag(rails_blob_path(video.video), size: "500x300", autoplay: true, muted: true, controls: true) %>
+  </div>
+<% end %>

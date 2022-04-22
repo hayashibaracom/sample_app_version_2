@@ -1,0 +1,8 @@
+<% provide(:title, 'Video') %>
+<h1>User_Video</h1>
+<h3><%= @user.name %></h3>
+<div class="video">
+  <%= video_tag("/videos/user_video.mp4", size: "500x300", autoplay: true, muted: true, controls: true) %>
+</div>
+
+
